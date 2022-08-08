@@ -14,7 +14,10 @@ void Task()
     int size = 4;
     string [] array = new string[size];
     array = FillArray(size);
+    Console.WriteLine("Вывод первоначального массива:");
     PrintArray(array);
+    Console.WriteLine("Вывод отсортированного массива:");
+    FilterArrayByStringLength (array);
 }
         
 string [] FillArray(int size)
@@ -36,6 +39,18 @@ void PrintArray (string [] array)
         
         Console.Write(array[i] + " ");
         
+    }
+    Console.WriteLine();
+}
+void FilterArrayByStringLength (string [] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length < 3)
+        {
+            Console.Write(array[i] + " ");
+        }
+              
     }
     Console.WriteLine();
 }
